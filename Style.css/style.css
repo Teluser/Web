@@ -1,0 +1,15 @@
+p{
+	color: red;
+}
+.btn_id span.icon {
+    background-image: url(Images/Capture1.png) no-repeat;
+    background-size: 20px ;
+}
+.btn{
+	padding: 10px;
+	text-align: center;
+	border-radius:10px;
+}
+.btn:hover{
+	background-color:blue;
+}
