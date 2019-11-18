@@ -1,0 +1,8 @@
+div{
+	display: none;
+	float:left;
+	border: 2px solid green;
+	margin-left: 5px;
+	/*width:200px;
+	height: 150px;*/
+}

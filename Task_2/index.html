@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="Style/style.css"></link>
+	<script src="app.js" type="text/javascript"></script>
+</head>
+<body>
+	<form name="form1" id="form1">
+		<p>Creat a table!</p>
+		Number of rows:<br>
+		<input type="text" name="rows"><br>
+		Number of colums:<br>
+		<input type="text" name="col"><br>
+		<input type="button" value="Creat" onclick="creatTable()"></button>
+	</form>
+	<div>
+		<p>Change border of table</p>
+		Width of table:<br>
+		<input type="text" id="width"><br>
+		Type of border:<br>
+		<select>
+		<option value="solid">Solid</option>
+		<option value="dotted">Dotted</option>
+		<option value="dashed">Dashed</option>
+		<option value="double">Double</option>
+		</select>
+		<input type="button" value="Apply" onclick="changeTable()"></button>
+	</div>
+	<div>
+		<p>Add title</p>
+		Title of table:<br>
+		<input type="text" id="title_tbl"><br>
+		<input type="button" value="Add" onclick="addTitle()"></button>
+	</div>
+	<div>
+		<p>Delete row</p>
+		Row's number:<br>
+		<input type="text" id="row_tbl"><br>
+		<input type="button" value="Delete" onclick="deleteRow()"></button>
+	</div>	
+	<div>
+		<p>Choose random</p>
+		<input type="button" value="Magic" onclick="changeCell()"></button>
+	</div>
+	<div>
+		<p>Delete</p>
+		<input type="button" value="Delete table" onclick="deleteTable()"></button>
+	</div>
+	<script type="text/javascript">
+		
+	</script>
+	
+</body>
+</html>
