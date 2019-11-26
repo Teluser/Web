@@ -78,3 +78,14 @@ document.addEventListener('click', function(event) {
 	alert('Координаты курсора относительно всего документа: (' + x + '; ' + y + ')');
 	alert('координаты курсора относительно экрана: (' + x1 + '; ' + y1 + ')');
 })
+//obj table
+function withTable(){
+	var tbl=document.getElementsByTagName("table")[0];
+	tbl.style.border="2px solid black";
+	tbl.cellPadding=10;
+	tbl.cellSpacing=10;
+	document.write("рамку таблицы: "+tbl.style.border.bold()+"<br>");
+	var cap=document.createElement("caption");
+	cap.innerHTML="MY TABLE";
+	tbl.appendChild(cap);
+}
