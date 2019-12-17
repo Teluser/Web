@@ -1,19 +1,18 @@
 $(document).ready(function() {
     $('#btn1').on('click', function(e){
       e.preventDefault();
-      var url = 'https://bobleman.github.io/ajax-1.html';
+      var url = 'https://inxaoc.github.io/example/ajax-1.html';
       $.ajax({
         url: url,
         type: 'GET',
         success: function(response) {
-            console.log(response);
           $("#response").append(response);
         }
       })
     })
     $('#btn2').on('click',function(e){
       e.preventDefault();
-      var url='https://bobleman.github.io/ajax-2.html';
+      var url='https://inxaoc.github.io/example/ajax.json';
       $.getJSON(url,function(data){
         console.log(data);
         var a=data["glossary"]["title"]
@@ -21,7 +20,17 @@ $(document).ready(function() {
         // $('#response').append(a +"<br>");
         var json=JSON.stringify(data);
         
-        var text="";
+        
+        $('#response').html(jsonToList(json));
+         // $('#response').html(JSON.stringify(text));
+      })
+      })
+    $('#btn3').on('click',function(e){
+      location.reload(true);
+    })
+  })
+function jsonToList(json){
+  var text="";
         for (var i = 0; i < json.length; i++) {
           if (json[i] == '{' || json[i] == '[') {
             text += "<ul><li>";
@@ -38,10 +47,5 @@ $(document).ready(function() {
           } else text +=json[i];
 
         }
-         $('#response').html(JSON.stringify(text));
-      })
-      })
-    $('#btn3').on('click',function(e){
-      $('#response').load('https://bobleman.github.io/ajax-1.html');
-    })
-  })
+  return text;
+}

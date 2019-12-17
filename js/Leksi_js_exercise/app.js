@@ -1,3 +1,4 @@
+alert(document.getElementsByTagName("p")[0].innerHTML);
 document.write("Hello");
 document.write("<h1>Привет Мир!</h1>");
 document.write("количество анкоров в документе: "+document.anchors.length+"<br>");
